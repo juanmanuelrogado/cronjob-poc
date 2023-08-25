@@ -1,0 +1,17 @@
+{
+	"id": "liferaysampleetcspringboot",
+	"kind": "CronJob",
+	"concurrencyPolicy": "Replace",
+	"cpu": 1,
+	"memory": 512,
+	"scale": 1,
+	"schedule": "*/5 * * * *",
+	"environments": {
+		"infra": {
+			"deploy": false
+		}
+	},
+	"loadBalancer": {
+		"targetPort": 58081
+	}
+}

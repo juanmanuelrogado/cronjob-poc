@@ -1,0 +1,29 @@
+{
+	"id": "liferaysampleetccron",
+	"kind": "CronJob",
+	"concurrencyPolicy": "Forbid",
+	"cpu": 1,
+	"memory": 512,
+	"scale": 1,
+	"environments": {
+		"infra": {
+			"deploy": false
+		}
+	},
+	"livenessProbe": {
+		"httpGet": {
+			"path": "/ready",
+			"port": 58081
+		}
+	},
+	"readinessProbe": {
+		"httpGet": {
+			"path": "/ready",
+			"port": 58081
+		}
+	},
+	"loadBalancer": {
+		"targetPort": 58081
+	},
+	"schedule": "*/1 * * * *"
+}

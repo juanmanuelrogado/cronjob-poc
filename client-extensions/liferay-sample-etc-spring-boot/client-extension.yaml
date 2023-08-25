@@ -1,0 +1,11 @@
+assemble:
+    - fromTask: bootJar
+liferay-sample-etc-spring-boot-oauth-application-headless-server:
+    .serviceAddress: localhost:58081
+    .serviceScheme: http
+    name: Liferay Sample Etc Springboot Oauth Application Headless Server
+    userAccountScreenName: juanmanuel.rogado
+    scopes:
+        - Liferay.Headless.Admin.User.everything.read
+        - Liferay.Headless.Delivery.everything
+    type: oAuthApplicationHeadlessServer
